@@ -20,8 +20,8 @@ server {
         proxy_cache_bypass $http_upgrade;
     }
 
-    location /static/ {
-        proxy_pass http://localhost:8000/static/; # Forward requests to your Next.js main application
+    location /statics/ {
+        proxy_pass http://localhost:8000/statics/; # Forward requests to your Next.js main application
         proxy_http_version 1.1;
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection 'upgrade';
